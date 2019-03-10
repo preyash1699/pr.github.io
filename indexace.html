@@ -1,0 +1,227 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="Style.css">
+<title>ACE-Academy</title>
+
+
+<style>
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #34db72;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 }
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+
+}
+</style>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
+<body onload="myFunction()" style="margin:0;">
+<div id="loader"></div>
+<div style="display:none;" id="myDiv" class="animate-bottom">
+<div>
+<nav>
+  <div id="logo">ACE-Academy</div>
+  <label for="drop" class="toggle"><font size="5">≡</font><font size="5"> menu</font></font></label>
+  <input type="checkbox" id="drop" />
+  <ul class="menu">
+    <li><a href="#Home">Home</a></li>
+    <li>
+      <!-- First Tier Drop Down -->
+      <a href="#Summercamp">Summercamp</a>
+
+    </li>
+    <li>
+
+      <!-- First Tier Drop Down -->
+
+      <a href="#Contact">Contact Us</a>
+      <!--<input type="checkbox" id="drop-2"/>
+      <ul>
+        <li><a href="#">Portfolio 1</a></li>
+        <li><a href="#">Portfolio 2</a></li>
+        -->
+    </nav>
+
+  </li>
+<br>
+<div class="divider"></div>
+</ul>
+</div>
+<div class="w3-content w3-display-container" style="max-width: 800px">
+  <img class="mySlides" src="images/11.png" style="width:100%">
+  <img class="mySlides" src="images/12.png" style="width:100%">
+
+
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+<div><hr></div>
+
+
+<div class="w3-content w3-section" style="max-width:800px"><a name="Summercamp"></a>
+  <img class="mySlides2" src="images/summer.png" style="width:100%">
+  <img class="mySlides2" src="images/21.png" style="width:100%">
+  <img class="mySlides2" src="images/22.png" style="width:100%">
+  <img class="mySlides2" src="images/23.png" style="width:100%">
+
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+
+<script>
+var myIndex = 0;
+carousel();
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides2");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+<style type="text/css">
+    #main-content {
+      max-width: 800px;
+      margin: 0 auto;
+
+    }
+    .responsive {
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%;
+      position: relative;
+    }
+    .responsive iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+<center><h2><font color=#075E54>Find Us <img src="images/maps.png" height="30" width="30"></font></h2></center>
+<div id="main-doc-body">
+  <div id="main-content">
+    <div class="responsive">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.209592395223!2d72.97369501434895!3d19.186045853491112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b8d8ac095ecd%3A0xa0a0c2892f6eee96!2sThane+Station!5e0!3m2!1sen!2sin!4v1531586174206" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    <footer id="footer">
+    </footer>
+  </div>
+</div>
+<div class="social">
+     <br>
+    <center>
+      <a class="fb" href="https://www.facebook.com"><img src="images/fb2.png" height="30" width="30"></a>
+      <a class="fb" href="https://www.linkedin.com"><img src="images/ln2.png" height="30" width="30"></a>
+      <a class="fb" href="https://twitter.com/"><img src="images/twt2.png" height="30" width="30"></a>
+      <a class="fb" href="https://www.instagram.com/"><img src="images/insta.png" height="30" width="30"></a>
+
+    </center>
+  </div>
+
+    <div >
+
+    </div>
+    <div class="legal">
+
+      <h3><img src="images/building.png" height="30" width="30"><a name="Contact"></a>Contact Us</h3> <br> <img src="images/email.png" height="20" width="20"> <a href="mailto:praj_kenny@yahoo.com" target="_blank">contact@gmail.com</a><br>
+      <img src="images/whatsapp.png" height="20" width="20"> +91 9819360154<br>
+      <img src="images/phone.gif" height="20" width="20"> +91 7039115460/+91 989274707<br><br>
+
+      <center>
+     Pragati Cooperative Housing Society, Near Podar Jumbo Kids, Mahavir Nagar Kandivali (West), Mumbai 400067
+
+  </div></center>
+<script>
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" >var scrolltotop={setting:{startline:100,scrollto:0,scrollduration:1e3,fadeduration:[500,100]},controlHTML:'<img src="https://i1155.photobucket.com/albums/p559/scrolltotop/arrow27.png" />',controlattrs:{offsetx:5,offsety:5},anchorkeyword:"#top",state:{isvisible:!1,shouldvisible:!1},scrollup:function(){this.cssfixedsupport||this.$control.css({opacity:0});var t=isNaN(this.setting.scrollto)?this.setting.scrollto:parseInt(this.setting.scrollto);t="string"==typeof t&&1==jQuery("#"+t).length?jQuery("#"+t).offset().top:0,this.$body.animate({scrollTop:t},this.setting.scrollduration)},keepfixed:function(){var t=jQuery(window),o=t.scrollLeft()+t.width()-this.$control.width()-this.controlattrs.offsetx,s=t.scrollTop()+t.height()-this.$control.height()-this.controlattrs.offsety;this.$control.css({left:o+"px",top:s+"px"})},togglecontrol:function(){var t=jQuery(window).scrollTop();this.cssfixedsupport||this.keepfixed(),this.state.shouldvisible=t>=this.setting.startline?!0:!1,this.state.shouldvisible&&!this.state.isvisible?(this.$control.stop().animate({opacity:1},this.setting.fadeduration[0]),this.state.isvisible=!0):0==this.state.shouldvisible&&this.state.isvisible&&(this.$control.stop().animate({opacity:0},this.setting.fadeduration[1]),this.state.isvisible=!1)},init:function(){jQuery(document).ready(function(t){var o=scrolltotop,s=document.all;o.cssfixedsupport=!s||s&&"CSS1Compat"==document.compatMode&&window.XMLHttpRequest,o.$body=t(window.opera?"CSS1Compat"==document.compatMode?"html":"body":"html,body"),o.$control=t('<div id="topcontrol">'+o.controlHTML+"</div>").css({position:o.cssfixedsupport?"fixed":"absolute",bottom:o.controlattrs.offsety,right:o.controlattrs.offsetx,opacity:0,cursor:"pointer"}).attr({title:"Scroll to Top"}).click(function(){return o.scrollup(),!1}).appendTo("body"),document.all&&!window.XMLHttpRequest&&""!=o.$control.text()&&o.$control.css({width:o.$control.width()}),o.togglecontrol(),t('a[href="'+o.anchorkeyword+'"]').click(function(){return o.scrollup(),!1}),t(window).bind("scroll resize",function(t){o.togglecontrol()})})}};scrolltotop.init();</script>
+<!--<noscript>Not seeing a <a href="https://www.scrolltotop.com/">Scroll to Top Button</a>? Go to our FAQ page for more info.</noscript>-->
+
+</div>
+</body>
+</html>
