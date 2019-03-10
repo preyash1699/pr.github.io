@@ -115,6 +115,30 @@ li > a:after { content: ''; }
 
 li > a:only-child:after { content: ''; }
 
+/* Control the left side */
+.left {
+  left: 0;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+}
+
+/* If you want the content centered horizontally and vertically
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+/* .centered img {
+  width: 150px;
+  border-radius: 50%;
+}  */
 
 /* Media Queries
 --------------------------------------------- */
@@ -205,30 +229,7 @@ nav ul ul ul li { position: static;
   padding-top: 80px;
 }
 
-/* Control the left side */
-.left {
-  left: 0;
-}
 
-/* Control the right side */
-.right {
-  right: 0;
-}
-
-/* If you want the content centered horizontally and vertically
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-/* Style the image inside the centered container, if needed */
-/* .centered img {
-  width: 150px;
-  border-radius: 50%;
-}  */
 @media all and (max-width : 330px) {
 
 nav ul li {
