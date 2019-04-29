@@ -1,0 +1,514 @@
+# Name = input("Enter student name - ")
+# sem = int(input("Enter semester - "))
+# n = int(input("Enter number of subjects - "))
+# print("Enter the marks - ")
+# m = []
+# for i in range(n):
+#     m.append(int(input("Subject {} - ".format(i+1))))
+#
+# for i in range(n):
+#     print("Marks scored in subject {} = {}".format(i+1,m[i]))
+#
+# print("Average = {}".format(sum(m)/n))
+
+#--------------------------------------------------------------
+# year = int(input("Enter year - "))
+# if (year%4==0 and year%100!=0) or (year%400==0):
+#     print("{} is a leap year .".format(year))
+# else:
+#     print("{} is not a leap year .".format(year))
+
+#---------------------------------------------------------------
+#
+# s = input("Enter a string - ")
+# srev = s[::-1]
+#
+# print(s)
+# print(srev)
+# if s == srev:
+#     print("It is a palindrome ")
+# else:
+#     print("It is not a palindrome ")
+
+#----------------------------------------------------------------
+
+# while True :
+#     print("1:Add 2:Sub 3:Mul 4:fDiv 5:intDiv 6:Exp 7:Exit")
+#     a = int(input("Enter value of a - "))
+#     b = int(input("Enter value of b - "))
+#     ch = int(input("Enter choice - "))
+#
+#     if ch==1:
+#         print("{} + {} = {}".format(a,b,a+b))
+#     elif ch==2:
+#         print("{} - {} = {}".format(a,b,a-b))
+#     elif ch==3:
+#         print("{} * {} = {}".format(a,b,a*b))
+#     elif ch==4:
+#         print("{} / {} = {}".format(a,b,a/b))
+#     elif ch==5:
+#         print("{} // {} = {}".format(a,b,a//b))
+#     elif ch==6:
+#         print("{} ** {} = {}".format(a,b,a**b))
+#     elif ch==7:
+#         break
+#     else:
+#         print("Invalid choice !!")
+
+#-------------------------------------------------------
+
+# n = int(input("Enter number of rows - "))
+#
+# for i in range(n):
+#     for j in range(i+1):
+#         print("*",end=" ")
+#     print("")
+
+#--------------------------------------------------------
+# n = int(input("Enter number of rows - "))
+# c = 0
+# for i in range(n):
+#     for j in range(i+1):
+#         print(chr(65+c),end=" ")
+#         c+=1
+#     print("")
+
+#--------------------------------------------------------
+# n = int(input("Enter number of rows - "))
+#
+# def fact(n):
+#     f = 1
+#     for i in range(1,n+1):
+#         f*=i
+#     return f
+#
+# def nCr(n,r):
+#     return int(fact(n)/(fact(r)*fact(n-r)))
+#
+# print(1)
+# for i in range(2,n+1):
+#     for j in range(i+1):
+#         print(nCr(i,j),end=" ")
+#     print("")
+
+#----------------------------------------------------------
+# def fact(n):
+#     f = 1
+#     for i in range(1,n+1):
+#         f*=i
+#     return f
+
+#---------------------------------------------
+#krishnamurthy number - sum of factorial of all its digits == number
+
+# def Krishnamurty(n):
+#     ncopy = n
+#     sum = 0
+#     while n!=0:
+#         sum += fact(n%10)
+#         n = n//10
+#     if ncopy==sum:
+#         return 1
+#     else:
+#         return 0
+#
+# for i in range(1,10000):
+#     if Krishnamurty(i):
+#         print(i,end=" ")
+#
+# C:/Users/Ganesh/PycharmProjects/oops/practice/demo.py
+# 1 2 145
+
+#-------------------------------------------------------
+#perfect number - n is  excluded
+
+# def perfect(n):
+#     sum = 0
+#     for i in range(1,n):
+#         if n%i==0:
+#             sum += i
+#     if n == sum:
+#         return 1
+#     else:
+#         return 0
+#
+# n = int(input("Enter a number - "))
+# if perfect(n)==1:
+#     print("It is a perfect number .")
+# else:
+#     print("It is not a perfect number .")
+#
+# # for i in range(1,10000):
+# #      if perfect(i):
+# #          print(i,end=" ")
+#
+# C:/Users/Ganesh/PycharmProjects/oops/practice/demo.py
+# 6 28 496 8128
+
+#--------------------------------------------------------
+#
+# s = input("Enter a string - ")
+# print(s)
+# S = s.upper()
+# print(S[-1]+S[1:-1]+S[0])
+
+#------------------------------------------------------
+# s = input("Enter a string - ")
+# S = s.upper()
+# a = 0
+# d = 0
+# for i in S:
+#     if i.isnumeric():
+#         d+=1
+#     if i.isalpha():
+#         a+=1
+#
+# print("Number of digits - {}".format(d))
+# print("Number of letters - {}".format(a))
+#
+# Enter a string - ganeshnm2000@gmail.com
+# Number of digits - 4
+# Number of letters - 16
+#-----------------------------------------------------
+
+# def isprime(n):
+#     c = 0
+#     for i in range(1,n+1):
+#         if n%i==0:
+#             c += 1
+#     if c==2:
+#         return 1
+#     else:
+#         return 0
+#
+# def sumprimes(l):
+#     sum=0
+#     for i in l:
+#         if isprime(i)==1:
+#             sum += i
+#     return sum
+#
+# n = int(input("Enter number of integers - "))
+# l = list()
+# for i in range(n):
+#     l.append(int(input()))
+# print(sumprimes(l))
+#-----------------------------------------------------
+
+#UGLY
+# def maxdiv(a,b):
+#     while a%b==0:
+#         a = a//b
+#     return a
+# 
+# def is_ugly(n):
+#     n = maxdiv(n,2)
+#     n = maxdiv(n,3)
+#     n = maxdiv(n,5)
+#     if n==1:
+#         return 1
+#     else:
+#         return 0
+
+# n = int(input("Enter a number - "))
+#
+# if is_ugly(n):
+#     print("It is a ugly number.")
+# else:
+#     print("It is not a ugly number")
+
+# for i in range(1,100):
+#     if is_ugly(i):
+#         print(i,end=" ")
+#         
+# C:/Users/Ganesh/PycharmProjects/oops/practice/demo.py
+# 1 2 3 4 5 6 8 9 10 12 15 16 18 20 24 25 27 30 32 36 40 45 48 50 54 60 64 72 75 80 81 90 96 
+
+#-----------------------------------------------------
+
+#Data Structures
+
+# print("Imlementation of Stack using lists")
+# def Push(l,ele):
+#     l.insert(0,ele)
+#
+# def Pop(l):
+#     if len(l)==0:
+#         print("Underflow")
+#         return -1
+#     else:
+#         ele = l.pop(0)
+#         return ele
+#
+# def display(l):
+#     if len(l)==0:
+#         print("Stack is empty")
+#     else:
+#         print(l)
+#
+# Stack = []
+#
+# Push(Stack,34)
+# Push(Stack,56)
+# Push(Stack,89)
+# display(Stack)
+# print("Deleted element = {}".format(Pop(Stack)))
+# display(Stack)
+#------------------------------------------------------------
+
+#print("Imlementation of Queue using lists")
+# def Insert(l,ele):
+#     l.append(ele)
+#
+# def Delete(l):
+#     if len(l)==0:
+#         print("Underflow")
+#         return -1
+#     else:
+#         ele = l.pop(0)
+#         return ele
+#
+# def display(l):
+#     if len(l)==0:
+#         print("Queue is empty")
+#     else:
+#         print(l)
+#
+# Queue = []
+#
+# Insert(Queue,34)
+# Insert(Queue,56)
+# Insert(Queue,89)
+# display(Queue)
+# print("Deleted element = {}".format(Delete(Queue)))
+# display(Queue)
+
+#----------------------------------------------------------
+#print("Imlementation of Linked List")
+
+# class Node:
+#     def __init__(self,data=None):
+#         self.data = data
+#         self.next = None
+#
+# class LinkedList:
+#     def __init__(self):
+#         self.head = None
+#         self.next = None
+#
+#     def insert_beg(self,data):
+#         new_node = Node(data)
+#         new_node.next = self.head
+#         self.head = new_node
+#
+#     def insert_end(self,data):
+#         new_node = Node(data)
+#         cur_node = self.head
+#         while cur_node.next!=None:
+#             cur_node = cur_node.next
+#         cur_node.next = new_node
+#
+#     def delete_beg(self):
+#         if self.head == None:
+#             print("Linked list is empty")
+#             return -1
+#         else:
+#             ele = self.head.data
+#             self.head = self.head.next
+#             return ele
+#
+#     def delete_end(self):
+#         if self.head == None:
+#             print("Linked list is empty")
+#             return -1
+#         else:
+#             cur_node = self.head
+#             while cur_node.next.next!=None:
+#                 cur_node = cur_node.next
+#             ele = cur_node.next.data
+#             cur_node.next = None
+#             return ele
+#
+#     def display(self):
+#         if self.head == None:
+#             print("Linked list is empty")
+#         else:
+#             cur_node = self.head
+#             while cur_node!=None:
+#                 print(cur_node.data,end=" ")
+#                 cur_node = cur_node.next
+#             print()
+#
+# l = LinkedList()
+#
+# l.insert_beg(34)
+# l.insert_beg(46)
+# l.insert_beg(67)
+# l.insert_end(78)
+# l.insert_end(98)
+# l.insert_end(12)
+#
+# l.display()
+#
+# l.delete_beg()
+# l.display()
+#
+# l.delete_end()
+# l.display()
+#
+# # C:/Users/Ganesh/PycharmProjects/oops/practice/demo.py
+# # 67 46 34 78 98 12
+# # 46 34 78 98 12
+# # 46 34 78 98
+
+#----------------------------------------------------------
+#
+# d = {"Name":"Ganesh","Rollno":"17102A0032","Class":"SE CMPN A"}
+#
+# k = input("Enter a key - ")
+# if k in d:
+#     print("key "+k+" is present in given dictionary.")
+# else:
+#     print("key " + k + " is not present in given dictionary.")
+#
+#---------------------------------------------------------
+
+# s = input("Enter a string - ")
+# d = {}
+# for i in s:
+#     if i in d:
+#         d[i] += 1
+#     else:
+#         d[i] = 1
+#
+# print(d)
+# # C: / Users / Ganesh / PycharmProjects / oops / practice / demo.py
+# # Enter a string - Vidyalankar
+# # {'V': 1, 'i': 1, 'd': 1, 'y': 1, 'a': 3, 'l': 1, 'n': 1, 'k': 1, 'r': 1}
+#--------------------------------------------------------------------------
+
+# s1 = set(input("Enter first string - "))
+# s2 = set(input("Enter second string - "))
+# print(s1)
+# print(s2)
+# print(s1.union(s2))
+# print(s1.intersection(s2))
+# print(s1.difference(s2))
+# print(s1.symmetric_difference(s2))
+#
+# # C:/Users/Ganesh/PycharmProjects/oops/practice/demo.py
+# # Enter first string - ganesh
+# # Enter second string - moota
+# # {'s', 'h', 'n', 'e', 'g', 'a'}
+# # {'m', 'a', 'o', 't'}
+# # {'h', 's', 'n', 't', 'o', 'e', 'g', 'm', 'a'}
+# # {'a'}
+# # {'h', 's', 'n', 'e', 'g'}
+# # {'s', 'h', 'n', 't', 'o', 'e', 'g', 'm'}
+
+#---------------------------------------------------------
+# with open("abc.txt","r") as rf:
+#     content = rf.read()
+#     print(content)
+#---------------------------------------------------------
+#use w+ for copying and a+ for appending
+# with open("abc.txt","a+") as af:
+#     with open("xyz.txt","r") as rf:
+#         content = rf.read()
+#         af.write(content)
+
+#-------------------------------------------------------
+
+# with open("abc.txt","r") as rf:
+#     count = 0
+#     s = input("Enter a letter")
+#     for i in rf.read():
+#         if i==s:
+#             count += 1
+#     print(count)
+
+#-------------------------------------------------
+
+#oops
+# class lessthan(Exception):
+#     pass
+#
+# class Student:
+#     def __init__(self):
+#         pass
+#
+#     def get(self):
+#         self.rollno = int(input("Enter Roll no - "))
+#         self.name = input("Enter your name - ")
+#         print("Enter marks - ")
+#         self.m1 = int(input("Subject 1 - "))
+#         self.m2 = int(input("Subject 2 - "))
+#         self.m3 = int(input("Subject 3 - "))
+#
+# class Sports:
+#     def __init__(self):
+#         pass
+#
+#     def getsm(self):
+#         self.sm = int(input("Enter sports marks - "))
+#
+# class derived_class(Student,Sports):
+#     def __init__(self):
+#         pass
+#
+#     def display(self):
+#         self.total = (self.m1+self.m2+self.m3+self.sm)
+#         self.avg = self.total/4
+#
+#         try:
+#             print("Total = {}\nAverage = {}".format(self.total,self.avg))
+#             if self.total<50:
+#                 raise lessthan
+#         except lessthan:
+#             print("Error_KT")
+#             print("Apna time ayega !!")
+#
+# s = derived_class()
+# s.get()
+# s.getsm()
+# s.display()
+
+# # C:/Users/Ganesh/PycharmProjects/oops/practice/demo.py
+# # Enter Roll no - 32
+# # Enter your name - Ganesh
+# # Enter marks -
+# # Subject 1 - 10
+# # Subject 2 - 10
+# # Subject 3 - 10
+# # Enter sports marks - 5
+# # Total = 35
+# # Average = 8.75
+# # Error_KT
+# # Apna time ayega !!
+#-------------------------------------------------------------
+#Operator overloading
+#
+# class Complex:
+#     def __init__(self,x,y):
+#         self.x = x
+#         self.y = y
+#
+#     def __add__(self, other):
+#         return Complex(self.x + other.x,self.y + other.y)
+#
+#     def display(self):
+#         print(complex(self.x,self.y))
+#
+# c1 = Complex(-5,6)
+# c2 = Complex(2,4)
+# c1.display()
+# c2.display()
+#
+# c = c1 + c2
+# c.display()
+#
+# # C:/Users/Ganesh/PycharmProjects/oops/practice/demo.py
+# # (-5+6j)
+# # (2+4j)
+# # (-3+10j)
+
