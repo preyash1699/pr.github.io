@@ -24,4 +24,3 @@ this.body = Bodies.rectangle(x,y,w,h,{restitution: 1 ,friction: 1});
 ```
 
 
-Author Preyash Gothane
