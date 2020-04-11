@@ -1,5 +1,61 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic");
+/* loader */
+
+/* Demo */
+
+/* Animation */
+@-webkit-keyframes rotate {
+	to {
+	  -webkit-transform: rotate(360deg);
+			  transform: rotate(360deg);
+	}
+  }
+  @keyframes rotate {
+	to {
+	  -webkit-transform: rotate(360deg);
+			  transform: rotate(360deg);
+	}
+  }
+  /* Variables */
+  /* Loading Icon */
+  .loading {
+	height: 100vh;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-align: center;
+			align-items: center;
+	-webkit-box-pack: center;
+			justify-content: center;
+	background-color: -webkit-gradient(linear, left top, left bottom, from(#ecf0f1), to(#fff));
+	background: linear-gradient(#0c2329, rgb(7, 38, 46));
+	width: 100%;
+	height: 750px;
+  }
+  .loading__ring {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+  }
+  .loading__ring:first-child {
+	-webkit-transform: skew(30deg, 20deg);
+			transform: skew(30deg, 20deg);
+  }
+  .loading__ring:last-child {
+	-webkit-transform: skew(-30deg, -20deg) scale(-1, 1);
+			transform: skew(-30deg, -20deg) scale(-1, 1);
+  }
+  .loading__ring:last-child svg {
+	-webkit-animation-delay: -0.5s;
+			animation-delay: -0.5s;
+  }
+  .loading__ring svg {
+	-webkit-animation: rotate 1s linear infinite;
+			animation: rotate 1s linear infinite;
+	fill: rgba(255, 255, 255, 0.4);
+  }
+
+
 
 /*
 	Solid State by HTML5 UP
