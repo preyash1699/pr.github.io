@@ -3,9 +3,20 @@
 /* loader */
 
 /* Demo */
-
-/* Animation */
-@-webkit-keyframes rotate {
+.loader-wrapper {
+	height: 100vh;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-align: center;
+			align-items: center;
+	-webkit-box-pack: center;
+			justify-content: center;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ecf0f1), to(#fff));
+	background: linear-gradient(#0c2329, rgb(7, 38, 46));
+  }
+  
+  /* Animation */
+  @-webkit-keyframes rotate {
 	to {
 	  -webkit-transform: rotate(360deg);
 			  transform: rotate(360deg);
@@ -20,17 +31,8 @@
   /* Variables */
   /* Loading Icon */
   .loading {
-	height: 100vh;
-	display: -webkit-box;
-	display: flex;
-	-webkit-box-align: center;
-			align-items: center;
-	-webkit-box-pack: center;
-			justify-content: center;
-	background-color: -webkit-gradient(linear, left top, left bottom, from(#ecf0f1), to(#fff));
-	background: linear-gradient(#0c2329, rgb(7, 38, 46));
-	width: 100%;
-	height: 750px;
+	width: 100px;
+	height: 100px;
   }
   .loading__ring {
 	position: absolute;
