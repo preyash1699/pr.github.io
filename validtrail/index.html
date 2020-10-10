@@ -201,6 +201,85 @@
 
 					</section>
 
+
+
+
+					<!-- <div id="section-2" class="section"></div>
+								<div class="inner">
+									<h2 class="major">CASE STUDIES</h2>
+								</div>
+					
+					<div id="scrol">
+					<ul class="hs">
+						
+						<li class="item">
+							<article>
+									<!-<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+									<h3 class="major">PHARMACEUTICALS</h3>
+									<p>
+										The counterfeit drug which is the most lucrative type of illegally-copied goods, earns around $200 billion per year. Approximately 10% of all drugs in circulation are Counterfeit.
+										This can be regulated by making all stakeholders to buy and sell pharmaceutical products with enhanced product tracing to verify product authenticity at every point in the supply chain.
+									</p>
+									<a href="#" class="special">Learn more</a>
+							</article>
+						</li>
+						<li class="item">
+							<article>
+									<!- <a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a> ->
+									<h3 class="major">CONSUMER ELECTRONICS & AFTERMARKETS </h3>
+									<p>The counterfeit consumer Electronics Industry is set to exceed $3 trillion (U.S.) by 2020. With fraudsters using the anonymity afforded to them by the online world, it’s costing genuine brands lost revenue and also reputation.
+									</p>
+									<a href="#" class="special">Learn more</a>
+							</article>
+						</li>
+						<li class="item">
+							<article>
+								<!- <a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a> ->
+								<h3 class="major">FOOD AND AGRICULTURE</h3>
+								<p>In Industries involved in Food Processing and Distribution, it is crucial to trace back to the origin of the product to know epicentre of a food-borne illness. Food processing units and manufacturers can leverage Blockchain to reduce the risk of food-borne illness by ensuring products are kept at proper temperatures and not subject to tampering.
+								</p>
+								<a href="#" class="special">Learn more</a>
+							</article>
+						</li>
+						<li class="item">
+							<article>
+								<!- <a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a> ->
+								<h3 class="major">AUTOMOBILES AFTERMARKETS</h3>
+								<p>The fake auto parts labeled under the name of genuine auto component manufacturers are supplied to the dealers and marketers. While genuine brands suffer the damaged reputation and financial loss, the end consumers have to deal with fatal road accidents caused by the fake auto parts used in their vehicles.
+								</p>
+								<a href="#" class="special">Learn more</a>
+							</article>
+						</li>
+						<li class="item">
+							<article>
+								<!- <a href="#" class="image"><img src="images/pic077.jpg" alt="" /></a> ->
+								<h3 class="major">LUXURY RETAIL GOODS</h3>
+								<p>Counterfeit luxury goods are one of the biggest problems in the Industry. What makes catching super fakes even more difficult is the fact that they are primarily sold online. Online Shopper’s may not realise what they buying is not genuine or is second hand.
+								</p>											
+								<a href="#" class="special">Learn more</a>
+							</article>
+						</li>
+						<li class="item">
+							<article>
+								<!- <a href="#" class="image"><img src="images/pic0789.jpg" alt="" /></a> ->
+								<h3 class="major">EXPENSIVE LIQUORS</h3>
+								<p>The liquor industry loses millions in fortune , consumers and brand image due to the replicas of their products. The trade in counterfeit alcohol threatens the safety of those that consume it, as well as the reputation of the rightful brand owner. In this article, we assess the threat and set out tools for protection.
+								</p>
+								<a href="#" class="special">Learn more</a>
+							</article> 
+						</li>
+					  </ul>
+					</div> -->
+
+
+
+
+
+
+
+
+
+
 				<!-- Footer -->
 				<div id="section-3" class="section"></div>
 					<section id="footer">
@@ -266,6 +345,9 @@
 	});
 			</script>
 			
-
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			<script type="text/javascript">
+			var scrolltotop={setting:{startline:100,scrollto:0,scrollduration:1e3,fadeduration:[500,100]},controlHTML:'<img src="images/uparrow.png" />',controlattrs:{offsetx:5,offsety:5},anchorkeyword:"#top",state:{isvisible:!1,shouldvisible:!1},scrollup:function(){this.cssfixedsupport||this.$control.css({opacity:0});var t=isNaN(this.setting.scrollto)?this.setting.scrollto:parseInt(this.setting.scrollto);t="string"==typeof t&&1==jQuery("#"+t).length?jQuery("#"+t).offset().top:0,this.$body.animate({scrollTop:t},this.setting.scrollduration)},keepfixed:function(){var t=jQuery(window),o=t.scrollLeft()+t.width()-this.$control.width()-this.controlattrs.offsetx,s=t.scrollTop()+t.height()-this.$control.height()-this.controlattrs.offsety;this.$control.css({left:o+"px",top:s+"px"})},togglecontrol:function(){var t=jQuery(window).scrollTop();this.cssfixedsupport||this.keepfixed(),this.state.shouldvisible=t>=this.setting.startline?!0:!1,this.state.shouldvisible&&!this.state.isvisible?(this.$control.stop().animate({opacity:1},this.setting.fadeduration[0]),this.state.isvisible=!0):0==this.state.shouldvisible&&this.state.isvisible&&(this.$control.stop().animate({opacity:0},this.setting.fadeduration[1]),this.state.isvisible=!1)},init:function(){jQuery(document).ready(function(t){var o=scrolltotop,s=document.all;o.cssfixedsupport=!s||s&&"CSS1Compat"==document.compatMode&&window.XMLHttpRequest,o.$body=t(window.opera?"CSS1Compat"==document.compatMode?"html":"body":"html,body"),o.$control=t('<div id="topcontrol">'+o.controlHTML+"</div>").css({position:o.cssfixedsupport?"fixed":"absolute",bottom:o.controlattrs.offsety,right:o.controlattrs.offsetx,opacity:0,cursor:"pointer"}).attr({title:"Scroll to Top"}).click(function(){return o.scrollup(),!1}).appendTo("body"),document.all&&!window.XMLHttpRequest&&""!=o.$control.text()&&o.$control.css({width:o.$control.width()}),o.togglecontrol(),t('a[href="'+o.anchorkeyword+'"]').click(function(){return o.scrollup(),!1}),t(window).bind("scroll resize",function(t){o.togglecontrol()})})}};scrolltotop.init();
+			</script>
 	</body>
 </html>
